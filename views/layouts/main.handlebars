@@ -1,22 +1,42 @@
-<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="/feather.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <a href="/" class="logo__link">
+        <img src="/f1.8 black.png" alt="Logo" class="logo__image" />
+      </a>
+    </div>
+    <nav class="header__nav">
+      <a href="/" class="nav__button">Home</a>
+      <a href="/" class="nav__button">Projekte</a>
+      <a href="/register" class="nav__button">Einloggen</a>
+      <a href="/upload" class="nav__button">Hochladen</a>
+    </nav>
+  </header>
 
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HTML5 Boilerplate</title>
-    <link rel="stylesheet" href="/style.css" />
-  </head>
+  {{{body}}}
 
-  <body>
-    <header>
-      <a href="/">Home</a>
-    </header>
-
-    {{{body}}}
-
-    <footer>
-      <a href="/impressum">Impressum</a>
-    </footer>
-  </body>
-
+  <footer class="footer">
+    <p>©Fabian Arn</p>
+    <div class="socials__nav">
+      <a href="/" class="nav__button">Instagram</a>
+      <a href="/" class="nav__button">Behance</a>
+      <a href="/" class="nav__button">Email</a>
+      <a href="/" class="nav__button">Phone</a>
+    </div>
+  </footer>
+</body>
 </html>

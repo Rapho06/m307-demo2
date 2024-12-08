@@ -1,9 +1,81 @@
 * {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
-header,
+h1 {
+  font-weight: 900;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #000;
+  margin-bottom: 40px;
+  height: 30px;
+}
+
+.logo__image {
+  height: 30px;
+}
+
+/* .header__nav {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+} */
+
+/* .socials__nav {
+  display: flex;
+  width: 25%;
+  justify-content: space-around;
+} */
+
+.nav__button {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+  transition: font-weight 0.3s ease;
+}
+
+.nav__button:hover {
+  font-weight: bold;
+}
+
 footer {
-  background-color: lightblue;
-  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-top: 2px solid #000;
+  margin-top: 40px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__image {
+  height: 200px;
+}
+
+.hero__button {
+  text-decoration: none;
+  color: #000;
+  border: #000 1px solid;
+  border-radius: 10px;
+  padding: 7px 20px 5px 20px;
+}
+
+.big-button {
+  font-size: 20;
+  text-decoration: none;
+  color: #000;
+  border: #000 1px solid;
+  border-radius: 10px;
+  padding: 7px 20px 5px 20px;
 }

@@ -1,0 +1,27 @@
+<div class="hero"><img src="/P1067477.jpg" alt="" class="hero__image" />
+  <div class="hero__text">
+    <h1>f1.8 Portfolio</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <a href="/" class="hero__button">Projekte ansehen</a>
+  </div>
+  <img src="/P1065693.jpg" alt="" class="hero__image" />
+</div>
+
+<hr />
+
+<!-- PROJEKTE -->
+<div class="post__overview">
+  {{#post}}
+    <img src="/uploads/{{image}}" alt="" />
+    <div class="textbox">
+      <h1>{{title}}</h1>
+      <p>{{hashtags}}</p>
+      <p>{{likes.count}} Likes</p>
+      <form action="/like/{{id}}" enctype="multipart/form-data" method="POST">
+        <input type="submit" value="liken" />
+      </form>
+    </div>
+  {{/post}}
+</div>
+
+<a href="" class="big-button">Alle Projekte</a>
