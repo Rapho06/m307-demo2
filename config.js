@@ -47,11 +47,9 @@ export function createApp(dbconfig) {
   app.engine("handlebars", engine());
   app.set("view engine", "handlebars");
   app.set("views", "./views");
-
   app.use(express.static("public"));
   app.use(express.urlencoded({ extended: true }));
   app.use(cookieParser());
-
   app.use(
     sessions({
       secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
