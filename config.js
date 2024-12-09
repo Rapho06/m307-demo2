@@ -13,6 +13,23 @@ export function createApp(dbconfig) {
 
   const pool = new Pool(dbconfig);
 
+app.engine("handlebars", engine());
+app.set("view engine", "handlebars");
+app.set("views", "./views");
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
+app.use(
+  sessions({
+    secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
+    saveUninitialized: true,
+    cookie: { maxAge: 86400000, secure: false },
+    resave: false,
+  })
+);
+
+
+
   const login = new bbz307.Login(
     "users",
     ["benutzername", "passwort", "vollername"],
@@ -43,21 +60,6 @@ export function createApp(dbconfig) {
     }
     b;
   });
-
-  app.engine("handlebars", engine());
-  app.set("view engine", "handlebars");
-  app.set("views", "./views");
-  app.use(express.static("public"));
-  app.use(express.urlencoded({ extended: true }));
-  app.use(cookieParser());
-  app.use(
-    sessions({
-      secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
-      saveUninitialized: true,
-      cookie: { maxAge: 86400000, secure: false },
-      resave: false,
-    })
-  );
 
   app.post("/posts", upload.single("headerfoto"), async function (req, res) {
     const user = await login.loggedInUser(req);
